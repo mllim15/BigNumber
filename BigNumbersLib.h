@@ -17,13 +17,17 @@
 #ifndef BigNumbersLib_h
 #define BigNumbersLib_h
 
+#include <vector>
+
 namespace MyBigNumbers {
     class BigNumbers {
+    private:
+        std::vector<int> storeDigits;   /* vector to store up to 1000 digits long */
     public:
         /**
          * @brief This will add a and b together.
          *
-         * @param Where a is the first number and b is the second number.
+         * @param a is the first number and b is the second number.
          *
          * @returns a + b
          */
@@ -32,7 +36,7 @@ namespace MyBigNumbers {
         /**
          * @brief This will subtract b from a.
          *
-         * @param Where a is the first number and b is the second number.
+         * @param a is the first number and b is the second number.
          *
          * @returns a - b
          */
@@ -66,7 +70,7 @@ namespace MyBigNumbers {
         void operator % (int a, int b);
         
         
-    }
+    };
 }
 
 #endif /* BigNumbersLib_h */
